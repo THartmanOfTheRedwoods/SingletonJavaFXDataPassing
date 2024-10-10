@@ -17,7 +17,8 @@ public class ConfigController {
 
     public void initialize() {
         System.out.println("Initializing ConfigController...");
-        mainStage = Main.getMainStage();
+        //mainStage = Main.getMainStage();
+        mainStage = ConfigurationSingleton.getInstance().getMainStage();
     }
     @FXML
     public void saveConfiguration() {

@@ -22,7 +22,8 @@ public class RootApplicationController {
 
     public void initialize() {
         System.out.println("Initializing RootApplicationController...");
-        mainStage = Main.getMainStage();
+        // mainStage = Main.getMainStage();
+        mainStage = ConfigurationSingleton.getInstance().getMainStage();
         // Since this gets called with scene swapping due to me re-loading the FXML
         // this is where I can initialize my Main Application Scene Label with the new config.
         // There are better ways of doing this, but this is to demo the Singleton Config, so I'm

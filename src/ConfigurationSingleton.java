@@ -1,7 +1,18 @@
+import javafx.stage.Stage;
+
 public class ConfigurationSingleton {
 
+    private Stage mainStage;
     private String configuredIP;
     private ConfigurationSingleton(){ }
+
+    public Stage getMainStage() {
+        return mainStage;
+    }
+
+    public void setMainStage(Stage mainStage) {
+        this.mainStage = mainStage;
+    }
 
     private static class SingletonHelper {
         private static final ConfigurationSingleton INSTANCE = new ConfigurationSingleton();

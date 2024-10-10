@@ -7,11 +7,12 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class Main extends Application {
-    private static Stage mainStage;
+    //private static Stage mainStage;
 
     @Override
     public void start(Stage mainStage) throws Exception {
-        Main.mainStage = mainStage;
+        //Main.mainStage = mainStage;
+        ConfigurationSingleton.getInstance().setMainStage(mainStage);
         Parameters p = getParameters();
         //stage.setHeight(Double.parseDouble(p.getNamed().get("height")));
         //stage.setWidth(Double.parseDouble(p.getNamed().get("width")));
@@ -24,9 +25,9 @@ public class Main extends Application {
         mainStage.show();
     }
 
-    public static Stage getMainStage() {
-        return mainStage;
-    }
+    //public static Stage getMainStage() {
+    //    return mainStage;
+    //}
 
     public static void main(String[] args) {
         launch(args);
